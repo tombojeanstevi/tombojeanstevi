@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog Article | TOMBO Jean Stevi</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        .article-page {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 140px 25px 80px;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .article-category {
+            color: #0787f9;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-title {
+            font-size: 42px;
+            line-height: 1.2;
+            margin: 15px 0;
+        }
+
+        .article-date {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .article-content {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            margin-top: 45px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .article-content h3 {
+            font-size: 22px;
+            margin-top: 30px;
+            color: #222;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+        }
+
+        .article-content ul {
+            margin: 15px 0 25px 25px;
+        }
+
+        .article-content li {
+            margin-bottom: 10px;
+        }
+
+        .article-content code {
+            background: #f1f1f1;
+            padding: 3px 7px;
+            border-radius: 4px;
+        }
+
+        .article-content pre {
+            background: #111;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        .back-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 35px;
+            color: #0787f9;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-blog:hover {
+            text-decoration: underline;
+        }
+
+        .article-not-found {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .article-page {
+                padding-top: 110px;
+            }
+
+            .article-title {
+                font-size: 32px;
+            }
+
+            .article-content {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="article-page">
+
+        <a href="index.html#blog" class="back-blog">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Blog
+        </a>
+
+        <header class="article-header">
+            <div class="article-category" id="article-category">
+                Technology
+            </div>
+
+            <h1 class="article-title" id="article-title">
+                Loading article...
+            </h1>
+
+            <div class="article-date" id="article-date"></div>
+        </header>
+
+        <article class="article-content" id="article-content">
+            <p>Loading...</p>
+        </article>
+
+    </main>
+
+
+<script>
+
+const articles = {
+
+    zabbix: {
+        title: "How to Monitor a Network with Zabbix",
+        category: "Network Monitoring",
+        date: "2026",
+        content: `
+            <p>
+                Network monitoring is an essential part of IT infrastructure
+                management. It allows administrators to detect problems,
+                monitor performance and react quickly to incidents.
+            </p>
+
+            <h2>What is Zabbix?</h2>
+
+            <p>
+                Zabbix is an open-source monitoring platform used to supervise
+                servers, network devices, applications and other IT resources.
+            </p>
+
+            <h2>Why use Zabbix?</h2>
+
+            <p>
+                With Zabbix, administrators can monitor CPU usage, memory,
+                network traffic, availability and many other metrics.
+            </p>
+
+            <ul>
+                <li>Network availability monitoring</li>
+                <li>CPU and memory monitoring</li>
+                <li>Traffic monitoring</li>
+                <li>Automatic alerts</li>
+                <li>Performance analysis</li>
+            </ul>
+
+            <h2>Technologies</h2>
+
+            <p>
+                A typical monitoring infrastructure can use
+                <strong>Zabbix</strong>, Linux, SNMP and network equipment
+                such as Cisco switches and routers.
+            </p>
+
+            <h2>Conclusion</h2>
+
+            <p>
+                A well-designed monitoring system provides better visibility
+                of the infrastructure and helps administrators identify
+                problems before they significantly affect users.
+            </p>
+        `
+    },
+
+
+    vlan: {
+        title: "Understanding VLANs in Enterprise Networks",
+        category: "Networking",
+        date: "2026",
+        content: `
+            <p>
+                VLANs are widely used in enterprise networks to logically
+                separate devices and users without requiring separate
+                physical networks.
+            </p>
+
+            <h2>What is a VLAN?</h2>
+
+            <p>
+                A VLAN, or Virtual Local Area Network, allows a physical
+                network to be divided into several logical networks.
+            </p>
+
+            <h2>Why use VLANs?</h2>
+
+            <ul>
+                <li>Network segmentation</li>
+                <li>Improved security</li>
+                <li>Reduced broadcast traffic</li>
+                <li>Better network organization</li>
+                <li> easier administration</li>
+            </ul>
+
+            <h2>Example</h2>
+
+            <p>
+                An organization could create different VLANs for the
+                administration department, IT department, finance department
+                and management.
+            </p>
+
+            <pre>
+VLAN 10 → Administration
+VLAN 20 → Finance
+VLAN 30 → IT
+VLAN 40 → Management
+            </pre>
+
+            <h2>Conclusion</h2>
+
+            <p>
+                VLANs are an important technology for building structured,
+                scalable and secure enterprise networks.
+            </p>
+        `
+    },
+
+
+    glpi: {
+        title: "IT Asset Management with GLPI",
+        category: "IT Management",
+        date: "2026",
+        content: `
+            <p>
+                Managing IT equipment becomes increasingly difficult as an
+                organization grows. IT asset management tools can help
+                administrators maintain an accurate inventory.
+            </p>
+
+            <h2>What is GLPI?</h2>
+
+            <p>
+                GLPI is an open-source IT management platform that can be used
+                for inventory, helpdesk, equipment management and many other
+                IT management tasks.
+            </p>
+
+            <h2>Inventory Management</h2>
+
+            <p>
+                An administrator can keep information about computers,
+                printers, servers, network devices and other equipment.
+            </p>
+
+            <h2>FusionInventory</h2>
+
+            <p>
+                FusionInventory can be used together with GLPI to collect
+                technical information from computers automatically.
+            </p>
+
+            <h2>Benefits</h2>
+
+            <ul>
+                <li>Centralized inventory</li>
+                <li>Equipment tracking</li>
+                <li>Better IT documentation</li>
+                <li>Incident management</li>
+                <li>Improved maintenance</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+
+            <p>
+                GLPI provides a practical solution for organizations that
+                want to centralize and improve their IT asset management.
+            </p>
+        `
+    },
+
+
+    linux: {
+        title: "Essential Linux Commands for System Administrators",
+        category: "Linux",
+        date: "2026",
+        content: `
+            <p>
+                Linux is widely used for servers and IT infrastructure.
+                Knowing the command line is therefore an important skill
+                for system administrators.
+            </p>
+
+            <h2>File Management</h2>
+
+            <pre>
+ls
+cd
+pwd
+mkdir
+cp
+mv
+rm
+            </pre>
+
+            <h2>System Information</h2>
+
+            <pre>
+uname -a
+hostname
+df -h
+free -h
+top
+            </pre>
+
+            <h2>Network Commands</h2>
+
+            <pre>
+ip addr
+ip route
+ping
+ss
+traceroute
+            </pre>
+
+            <h2>Package Management</h2>
+
+            <p>
+                On Debian-based systems, administrators commonly use
+                <code>apt</code> to install and update software.
+            </p>
+
+            <pre>
+sudo apt update
+sudo apt upgrade
+sudo apt install package-name
+            </pre>
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Mastering these basic commands provides a strong foundation
+                for Linux system administration.
+            </p>
+        `
+    },
+
+
+    security: {
+        title: "Common Network Security Mistakes in Companies",
+        category: "Cybersecurity",
+        date: "2026",
+        content: `
+            <p>
+                Network security is not only about installing a firewall.
+                Poor configuration and weak operational practices can also
+                expose an organization to security risks.
+            </p>
+
+            <h2>Weak Passwords</h2>
+
+            <p>
+                Using simple or shared passwords can make accounts easier
+                to compromise.
+            </p>
+
+            <h2>Unnecessary Open Services</h2>
+
+            <p>
+                Services and ports that are not required should be disabled
+                whenever possible.
+            </p>
+
+            <h2>Lack of Network Segmentation</h2>
+
+            <p>
+                Separating departments and sensitive systems can reduce the
+                impact of a security incident.
+            </p>
+
+            <h2>No Monitoring</h2>
+
+            <p>
+                Without monitoring, administrators may have difficulty
+                identifying unusual traffic or infrastructure problems.
+            </p>
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Security should be considered throughout the design,
+                configuration and maintenance of an IT infrastructure.
+            </p>
+        `
+    },
+
+
+    career: {
+        title: "From IT Student to IT Manager",
+        category: "Career",
+        date: "2026",
+        content: `
+            <p>
+                Building a career in IT is a continuous learning process.
+                Networking, systems administration, development and
+                cybersecurity are constantly evolving.
+            </p>
+
+            <h2>Starting with Networking</h2>
+
+            <p>
+                Understanding TCP/IP, switching, routing, VLANs and network
+                troubleshooting provides a strong technical foundation.
+            </p>
+
+            <h2>Learning Systems Administration</h2>
+
+            <p>
+                Working with Linux and Windows systems helps develop
+                practical skills for managing servers and infrastructure.
+            </p>
+
+            <h2>Working on Real Projects</h2>
+
+            <p>
+                Academic projects and internships provide an opportunity to
+                apply theoretical knowledge to real IT environments.
+            </p>
+
+            <h2>Continuous Learning</h2>
+
+            <p>
+                Technologies change quickly. An IT professional must
+                continuously learn, experiment and improve.
+            </p>
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Every project, internship and technical challenge can
+                contribute to professional growth and help build a stronger
+                IT career.
+            </p>
+        `
+    }
+
+};
+
+
+const params = new URLSearchParams(window.location.search);
+const articleId = params.get("article");
+
+const article = articles[articleId];
+
+if (article) {
+
+    document.title = article.title + " | TOMBO Jean Stevi";
+
+    document.getElementById("article-category").textContent =
+        article.category;
+
+    document.getElementById("article-title").textContent =
+        article.title;
+
+    document.getElementById("article-date").textContent =
+        article.date;
+
+    document.getElementById("article-content").innerHTML =
+        article.content;
+
+} else {
+
+    document.querySelector(".article-header").style.display = "none";
+
+    document.getElementById("article-content").innerHTML = `
+        <div class="article-not-found">
+            <h1>Article not found</h1>
+            <p>
+                The article you are looking for does not exist.
+            </p>
+
+            <a href="index.html#blog" class="btn">
+                Back to Blog
+            </a>
+        </div>
+    `;
+
+}
+
+</script>
+
+</body>
+</html>
